@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body>
+	<h1>Parent.html</h1>
+	<a id="link" href="#">Click to child.html </a>
+
+	<script type="text/javascript">
+
+	$(document).ready(function () {
+
+		window.name = "parent";
+
+		$('#link').click(function (event){ 
+
+			event.preventDefault();
+			window.open("child.html");
+
+
+		});
+
+	
+
+	});
+		
+
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body>
+	<h1>Child.html</h1>
+	<a id="link" href="#">Return to Parent </a>
+	
+	<script type="text/javascript">
+
+	$(document).ready(function () {
+
+		$('#link').click(function(event) {
+
+			event.preventDefault();
+			console.log(window.opener.location);
+			var goBack = window.open('', 'parent');
+			goBack.focus();
+
+		});
+	});
+
+		
+
+		
+
+	</script>
+</body>
+
+</html>
